@@ -5,11 +5,14 @@
 int	main(void)
 {
 	int	fd;
+	char	buf[256];
+	int	chars_read;
 
-	fd = open("file.txt", O_RDWR | O_CREAT);
+	fd = open("abc.txt", O_RDONLY);
 
-	printf("fd of file%d\n", fd);
-	write(1, "hello", 5);
-	write(fd, "hello", 5);
-	return 0;
+	while ((chars_read = read(fd, buf, 10)))
+	{
+		buf[chars_read] = '\0';
+		printf("buf -> %s\n", buf);
+	}
 }

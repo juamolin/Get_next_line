@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Get_Next_Line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juamolin <juamolin@student.42madrid.com>   #+#  +:+       +#+        */
+/*   By: juamolin <juamolin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-12-01 07:47:45 by juamolin          #+#    #+#             */
-/*   Updated: 2024-12-01 07:47:45 by juamolin         ###   ########.fr       */
+/*   Created: 2024/12/01 07:47:45 by juamolin          #+#    #+#             */
+/*   Updated: 2024/12/08 13:46:12 by juamolin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "get_next_line.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -76,7 +78,7 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*str;
