@@ -55,7 +55,7 @@ static char	*ft_read_fd(int fd, char *buffer)
 	{
 		buffer = malloc(sizeof(char) * 1);
 		if (!buffer)
-			return (NULL);
+			return (free(temp_buffer), NULL);
 		buffer[0] = '\0';
 	}
 	cont = 1;
@@ -90,21 +90,4 @@ char	*get_next_line(int fd)
 	}
 	buffer = ft_update_buffer(buffer);
 	return (read_line);
-}
-
-int	main(void)
-{
-	int		fd;
-	char	*text;
-
-	fd = open("abc.txt", O_RDONLY);
-	text = get_next_line(fd);
-	while (text)
-	{
-		printf("%s", text);
-		free(text);
-		text = get_next_line(fd);
-	}
-	close(fd);
-	return (0);
 }
