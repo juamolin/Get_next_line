@@ -6,7 +6,7 @@
 /*   By: juamolin <juamolin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 12:52:21 by juamolin          #+#    #+#             */
-/*   Updated: 2024/12/08 13:20:49 by juamolin         ###   ########.fr       */
+/*   Updated: 2024/12/14 17:41:52 by juamolin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <fcntl.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE	100000000
+#  define BUFFER_SIZE	10
 # endif
 
 char	*ft_strchr(const char *s, int c);
