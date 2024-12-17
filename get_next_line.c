@@ -91,3 +91,23 @@ char	*get_next_line(int fd)
 	buffer = ft_update_buffer(buffer);
 	return (read_line);
 }
+/*
+#include "get_next_line.h"
+
+int	main(void)
+{
+	int		fd;
+	char	*text;
+
+	fd = open("el_quijote.txt", O_RDONLY);
+	text = get_next_line(fd);
+	while (text)
+	{
+		printf("%s", text);
+		free(text);
+		text = get_next_line(fd);
+	}
+	close(fd);
+	return (0);
+}
+*/
